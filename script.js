@@ -4,8 +4,6 @@ let formSubmitted = false;
 const userInput = document.getElementById('userInput');
 const submitBtn = document.getElementById('submitBtn');
 const messageDiv = document.getElementById('message');
-const counterDiv = document.getElementById('counter');
-const resetBtn = document.getElementById('resetBtn');
 
 // Submit on button click
 submitBtn.addEventListener('click', processInput);
@@ -52,7 +50,6 @@ function handleNotAttending() {
     messageDiv.textContent = 'Maybe next time! 👋';
     messageDiv.classList.add('not-attending');
     
-    // Optional: Add Rick Roll easter egg
     setTimeout(() => {
         playRickRoll();
     }, 500);
