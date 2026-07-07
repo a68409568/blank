@@ -4,8 +4,8 @@ let formSubmitted = false;
 const userInput = document.getElementById('userInput');
 const submitBtn = document.getElementById('submitBtn');
 const messageDiv = document.getElementById('message');
-const videoContainer = document.getElementById('videoContainer');
-const videoPlayer = document.getElementById('videoPlayer');
+const gifContainer = document.getElementById('gifContainer');
+const gifPlayer = document.getElementById('gifPlayer');
 
 // Submit on button click
 submitBtn.addEventListener('click', processInput);
@@ -54,7 +54,7 @@ function handleNotAttending() {
     messageDiv.classList.add('not-attending');
     
     setTimeout(() => {
-        playRickRoll();
+        playGif();
     }, 500);
     
     formSubmitted = true;
@@ -66,12 +66,9 @@ function hideForm() {
     userInput.style.display = 'none';
 }
 
-function playRickRoll() {
-    console.log('videoContainer:', videoContainer); // Debug
-    console.log('videoPlayer:', videoPlayer); // Debug
-    videoPlayer.src = 'https://www.youtube.com/embed/xMHJGd3wwZk?autoplay=1';
-    videoContainer.style.display = 'block';
-    console.log('Video container display set to:', videoContainer.style.display); // Debug
+function playGif() {
+    gifPlayer.src = 'https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif';
+    gifContainer.style.display = 'block';
 }
 
 // Set initial focus

@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f5f5f5;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -131,6 +131,18 @@ button {
 .reset-btn:hover {
     background-color: #5a6268;
     transform: translateY(-2px);
+}
+
+#gifContainer {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#gifContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 @media (max-width: 600px) {
