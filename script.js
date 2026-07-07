@@ -43,11 +43,9 @@ function processInput() {
 
 function handleAttending() {
     attendanceCount++;
-    messageDiv.textContent = '✓ SUCCESS! +1 to meet attendance tally!';
+    messageDiv.textContent = 'SUCCESS! +1 to meet attendance tally!';
     messageDiv.classList.add('success');
-    updateCounter();
     formSubmitted = true;
-    showResetButton();
 }
 
 function handleNotAttending() {
@@ -61,12 +59,6 @@ function handleNotAttending() {
     
     formSubmitted = true;
     showResetButton();
-}
-
-function showResetButton() {
-    submitBtn.style.display = 'none';
-    userInput.style.display = 'none';
-    resetBtn.style.display = 'inline-block';
 }
 
 function playRickRoll() {
