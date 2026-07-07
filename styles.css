@@ -13,10 +13,10 @@ body {
     align-items: center;
 }
 
-.container {
+/**.container {
     width: 100%;
     padding: 20px;
-}
+}*/
 
 .form-card {
     background: white;
