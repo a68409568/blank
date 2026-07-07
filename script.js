@@ -66,5 +66,13 @@ function hideForm() {
     userInput.style.display = 'none';
 }
 
+function playRickRoll() {
+    console.log('videoContainer:', videoContainer); // Debug
+    console.log('videoPlayer:', videoPlayer); // Debug
+    videoPlayer.src = 'https://www.youtube.com/embed/xMHJGd3wwZk?autoplay=1';
+    videoContainer.style.display = 'block';
+    console.log('Video container display set to:', videoContainer.style.display); // Debug
+}
+
 // Set initial focus
 userInput.focus();
