@@ -58,7 +58,7 @@ function handleAttending() {
 }
 
 function handleNotAttending() {
-    messageDiv.textContent = 'Maybe next time! 👋';
+    messageDiv.textContent = 'Maybe next time!';
     messageDiv.classList.add('not-attending');
     messageDiv.style.color = 'black';
     messageDiv.style.backgroundColor = 'white';
