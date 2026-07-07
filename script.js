@@ -63,10 +63,6 @@ function handleNotAttending() {
     showResetButton();
 }
 
-function updateCounter() {
-    counterDiv.textContent = `Total Attendees: ${attendanceCount}`;
-}
-
 function showResetButton() {
     submitBtn.style.display = 'none';
     userInput.style.display = 'none';
@@ -74,11 +70,7 @@ function showResetButton() {
 }
 
 function playRickRoll() {
-    // Optional: Uncomment to enable Rick Roll
-    // window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-    
-    // Or use this alert as a fun alternative:
-    // alert('🎵 Never gonna give you up! 🎵');
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
 }
 
 resetBtn.addEventListener('click', () => {
