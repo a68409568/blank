@@ -67,7 +67,7 @@ function showResetButton() {
 }
 
 function playRickRoll() {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    window.location.href = 'https://www.youtube.com/watch?v=xMHJGd3wwZk';
 }
 
 resetBtn.addEventListener('click', () => {
