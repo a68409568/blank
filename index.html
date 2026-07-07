@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Attendance Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1>Welcome to the Meet Attendance Form</h1>
+            <p class="question">Are you attending tonight's meet?</p>
+            
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Type 'Y' or 'N'"
+                    maxlength="1"
+                    autocomplete="off"
+                >
+                <button id="submitBtn">Submit</button>
+            </div>
+            
+            <div id="message" class="message"></div>
+            <div id="counter" class="counter"></div>
+            
+            <button id="resetBtn" class="reset-btn" style="display: none;">Start Over</button>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+</body>
+</html>
