@@ -65,7 +65,7 @@ function handleNotAttending() {
     
     setTimeout(() => {
         playGif();
-    }, 500);
+    }, 25);
     
     formSubmitted = true;
     hideForm();
