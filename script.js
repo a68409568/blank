@@ -4,6 +4,7 @@ let formSubmitted = false;
 const userInput = document.getElementById('userInput');
 const submitBtn = document.getElementById('submitBtn');
 const messageDiv = document.getElementById('message');
+const resetBtn = document.getElementById('resetBtn');
 
 // Submit on button click
 submitBtn.addEventListener('click', processInput);
@@ -44,6 +45,7 @@ function handleAttending() {
     messageDiv.textContent = 'SUCCESS! +1 to meet attendance tally!';
     messageDiv.classList.add('success');
     formSubmitted = true;
+    showResetButton();
 }
 
 function handleNotAttending() {
@@ -56,6 +58,12 @@ function handleNotAttending() {
     
     formSubmitted = true;
     showResetButton();
+}
+
+function showResetButton() {
+    submitBtn.style.display = 'none';
+    userInput.style.display = 'none';
+    resetBtn.style.display = 'inline-block';
 }
 
 function playRickRoll() {
