@@ -20,12 +20,16 @@ userInput.addEventListener('keypress', (e) => {
 function processInput() {
     const answer = userInput.value.toUpperCase().trim();
     
-    // Clear previous message
+    // Clear previous message and styles
     messageDiv.className = 'message';
+    messageDiv.style.color = 'black';
+    messageDiv.style.backgroundColor = 'white';
     
     if (answer === '') {
         messageDiv.textContent = 'Please enter Y or N';
         messageDiv.classList.add('error');
+        messageDiv.style.color = 'white';
+        messageDiv.style.backgroundColor = 'black';
         return;
     }
     
@@ -36,6 +40,8 @@ function processInput() {
     } else {
         messageDiv.textContent = 'Not valid input, please try again.';
         messageDiv.classList.add('error');
+        messageDiv.style.color = 'white';
+        messageDiv.style.backgroundColor = 'black';
     }
     
     userInput.value = '';
@@ -45,6 +51,8 @@ function handleAttending() {
     attendanceCount++;
     messageDiv.textContent = 'SUCCESS! +1 to meet attendance tally!';
     messageDiv.classList.add('success');
+    messageDiv.style.color = 'black';
+    messageDiv.style.backgroundColor = 'white';
     formSubmitted = true;
     hideForm();
 }
@@ -52,6 +60,8 @@ function handleAttending() {
 function handleNotAttending() {
     messageDiv.textContent = 'Maybe next time! 👋';
     messageDiv.classList.add('not-attending');
+    messageDiv.style.color = 'black';
+    messageDiv.style.backgroundColor = 'white';
     
     setTimeout(() => {
         playGif();
