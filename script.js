@@ -4,7 +4,8 @@ let formSubmitted = false;
 const userInput = document.getElementById('userInput');
 const submitBtn = document.getElementById('submitBtn');
 const messageDiv = document.getElementById('message');
-const resetBtn = document.getElementById('resetBtn');
+const videoContainer = document.getElementById('videoContainer');
+const videoPlayer = document.getElementById('videoPlayer');
 
 // Submit on button click
 submitBtn.addEventListener('click', processInput);
@@ -45,7 +46,7 @@ function handleAttending() {
     messageDiv.textContent = 'SUCCESS! +1 to meet attendance tally!';
     messageDiv.classList.add('success');
     formSubmitted = true;
-    showResetButton();
+    hideForm();
 }
 
 function handleNotAttending() {
@@ -57,34 +58,18 @@ function handleNotAttending() {
     }, 500);
     
     formSubmitted = true;
-    showResetButton();
+    hideForm();
 }
 
-function showResetButton() {
+function hideForm() {
     submitBtn.style.display = 'none';
     userInput.style.display = 'none';
-    resetBtn.style.display = 'inline-block';
 }
 
 function playRickRoll() {
-    window.location.href = 'https://www.youtube.com/watch?v=xMHJGd3wwZk';
+    videoPlayer.src = 'https://www.youtube.com/embed/xMHJGd3wwZk?autoplay=1';
+    videoContainer.style.display = 'block';
 }
-
-resetBtn.addEventListener('click', () => {
-    // Reset form
-    userInput.value = '';
-    messageDiv.textContent = '';
-    messageDiv.className = 'message';
-    formSubmitted = false;
-    
-    // Show input and button again
-    userInput.style.display = 'block';
-    submitBtn.style.display = 'inline-block';
-    resetBtn.style.display = 'none';
-    
-    // Focus on input
-    userInput.focus();
-});
 
 // Set initial focus
 userInput.focus();
